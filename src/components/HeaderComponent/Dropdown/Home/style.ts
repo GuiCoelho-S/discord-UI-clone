@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styled from "styled-components";
 
 export const HomeContent = styled.article`
@@ -10,11 +9,14 @@ export const HomeContent = styled.article`
   flex-direction: column;
 
   header {
+    position: relative;
+    width:80%;
     display:flex;
     justify-content: flex-start;
     border:1px solid red;
-    padding-left: 20px;
-    position: relative;
+    border: 1px solid transparent;
+    border-bottom: 1px solid grey;
+    padding:20px 0 12px 0;
 
     h2 {
       font-size:1.3rem;
@@ -27,10 +29,15 @@ export const HomeContent = styled.article`
   ul {
     height:100%;
     overflow-y: scroll;
-    padding:10px 20px 10px 10px;
+    padding:30px 20px 10px 10px;
 
     display:flex;
     flex-direction: column;
+    
+    :--webkit-scrollbar {
+      display:none;
+    }
+    scrollbar-width: none;
   }
   
 `;
@@ -61,4 +68,28 @@ export const LinkStyled = styled.a`
   :focus {
     outline: 4px solid var(--brand)
   }
+`
+
+export const CloseDropDown = styled.button`
+position:absolute;
+top:20px;
+right:0px;
+
+padding:4px;
+background-color: transparent;
+border: 1px solid transparent;
+border-radius: 8px;
+
+display:grid;
+place-items:center;
+
+svg {
+  width:10px;
+  height: 10px;
+  fill: #444;
+}
+
+  :focus {
+  outline: 4px solid var(--brand);
+}
 `
