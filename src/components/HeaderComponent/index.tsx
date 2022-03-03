@@ -1,6 +1,7 @@
 import { FaDiscord } from 'react-icons/fa';
 import Link from 'next/link';
 import * as S from './style';
+import { SimpleButton } from '../ui/Button';
 
 function HeaderComponent() {
   return (
@@ -32,6 +33,7 @@ function HeaderComponent() {
             </li>            
           </ul>
         </S.NavList>
+          <SimpleButton><p>Entrar</p></SimpleButton>
         </header>
     </S.HeaderContainer>);
 }
