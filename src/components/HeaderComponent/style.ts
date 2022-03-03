@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   width: 100%;
+  max-width: 100vw;
   height: 100%;
 
   background-color: var(--brand);
@@ -14,6 +15,22 @@ export const HeaderContainer = styled.div`
     justify-content: space-evenly;
     align-items: center;
     padding: 20px 0;
+    position: relative;
+  }
+  
+  .dropdown-enter {
+    transform: translateX(100%);
+    position: absolute;
+  }
+  .dropdown-enter-active {
+    transform: translateX(0);
+    transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .dropdown-exit {
+    transform: translateX(0);
+  }
+  .dropdown-exit-active {
+    transform: translateX(100%);
   }
 ` ;
 
@@ -49,31 +66,4 @@ export const NavList = styled.nav`
        }
      }
    }
-`;
-
-export const HomeButton = styled.button`
-  background-color:inherit;
-  height: 60px;
-  display:flex;
-  justify-content: start;
-  align-items: center;
-  gap:10px;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid transparent;
-
-  svg {
-    width: 40px;
-    height: 40px;
-    fill: #fff;
-  }
-  h2 {
-    font-weight: 900;
-    color:#fff;
-    font-size:1.2rem;
-  }
-
-  :focus {
-    outline: 4px solid var(--focus-border);
-  }
 `;
