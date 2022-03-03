@@ -3,8 +3,12 @@ import { FaDiscord } from 'react-icons/fa';
 import { HomeButton } from '../../../ui/HomeButton';
 import * as S from './style';
 import { AiOutlineRight, AiOutlineClose } from 'react-icons/ai';
+import { useContext } from 'react';
+import { StateContext } from '../../../../context/useGlobalState';
 
-function DropdwonHome() {
+function DropdownHome() {
+  const { dropdownState, setDropdownState } = useContext(StateContext);
+
   return (
 
     <S.HomeContent>
@@ -13,7 +17,7 @@ function DropdwonHome() {
           <FaDiscord />
           <h2>Discord</h2>
         </HomeButton>
-        <S.CloseDropDown>
+        <S.CloseDropDown onClick={() => setDropdownState(false)} >
           <AiOutlineClose />
         </S.CloseDropDown>
 
@@ -44,4 +48,4 @@ function DropdwonHome() {
     </S.HomeContent>);
 }
 
-export default DropdwonHome;
+export default DropdownHome;
