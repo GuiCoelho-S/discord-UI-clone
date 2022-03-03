@@ -3,13 +3,14 @@ import styled from "styled-components";
 export const HomeContent = styled.article`
 
   width:100%;
-  height:100%;
+  height:auto;
   
   display:flex;
   flex-direction: column;
 
   header {
     position: relative;
+    height: 100px;
     width:80%;
     display:flex;
     justify-content: flex-start;
@@ -27,7 +28,7 @@ export const HomeContent = styled.article`
     }
   }
   ul {
-    height:100%;
+    height:calc(100vh - 170px); // 100px - header + 70px - footer
     overflow-y: scroll;
     padding:30px 20px 10px 10px;
 

@@ -10,10 +10,7 @@ interface ContextComponentType {
   children: ReactElement;
 }
 
-export const StateContext = createContext<ContextType | any>(null);
-
-export function StateDataProvider({ children }: ContextComponentType) {
-
+export const StateContext = createContext<ContextType | any>(null); export function StateDataProvider({ children }: ContextComponentType) {
   const [dropdownState, setDropdownState] = useState(false);
 
   return (

@@ -7,7 +7,7 @@ import { useContext } from 'react';
 import { StateContext } from '../../../../context/useGlobalState';
 
 function DropdownHome() {
-  const { dropdownState, setDropdownState } = useContext(StateContext);
+  const { setDropdownState } = useContext(StateContext);
 
   return (
 
@@ -27,6 +27,9 @@ function DropdownHome() {
           <S.LinkStyled>Início</S.LinkStyled>
         </Link>
         <Link href="/" passHref>
+          <S.LinkStyled>Baixar</S.LinkStyled>
+        </Link>
+        <Link href="/" passHref>
           <S.LinkStyled>Nitro</S.LinkStyled>
         </Link>
         <Link href="/" passHref>
@@ -42,7 +45,13 @@ function DropdownHome() {
           </S.LinkStyled>
         </Link>
         <Link href="/" passHref>
-          <S.LinkStyled>Início</S.LinkStyled>
+          <S.LinkStyled>Suporte</S.LinkStyled>
+        </Link>
+        <Link href="/" passHref>
+          <S.LinkStyled>Blog</S.LinkStyled>
+        </Link>
+        <Link href="/" passHref>
+          <S.LinkStyled>Carreiras</S.LinkStyled>
         </Link>
       </ul>
     </S.HomeContent>);

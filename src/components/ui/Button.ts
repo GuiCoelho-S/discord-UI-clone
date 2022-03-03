@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 interface StyleProps {
   bg?: string;
-  color?: string;
+  textColor?: string;
 }
 export const SimpleButton = styled.button<StyleProps>`
 
-  background-color: ${(props) => props.color ? props.color : "#fff"};
+  background-color: ${(props) => props.bg ? props.bg : "#fff"};
   
   border-radius: 50px;
-  border: 1px solid ${(props) => props.color ? props.color : "#fff"}; 
+  border: 1px solid ${(props) => props.bg ? props.bg : "#fff"}; 
   padding: 12px 20px;
 
   display: flex;
@@ -22,9 +22,10 @@ export const SimpleButton = styled.button<StyleProps>`
   svg {
     width: 30px;
     height: 30px;
+    fill:${(props) => props.textColor ? props.textColor : "#000"};
   }
   p {
-      color:${(props) => props.color ? props.color : "#000"};
+      color:${(props) => props.textColor ? props.textColor : "#000"};
       font-size: 1rem;
   }
   :hover, :focus {
@@ -34,5 +35,8 @@ export const SimpleButton = styled.button<StyleProps>`
     p {
       color: var(--brand);
     }
+  }
+  @media (max-width:400px){
+    padding: 8px 14px;
   }
 `;
