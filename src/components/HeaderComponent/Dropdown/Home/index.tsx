@@ -8,7 +8,7 @@ import { StateContext } from '../../../../context/useGlobalState';
 
 function DropdownHome() {
   const { setDropdownState } = useContext(StateContext);
-
+  const { setDropdownActive } = useContext(StateContext)
   return (
 
     <S.HomeContent>
@@ -33,13 +33,13 @@ function DropdownHome() {
           <S.LinkStyled>Nitro</S.LinkStyled>
         </Link>
         <Link href="/" passHref>
-          <S.LinkStyled>
+          <S.LinkStyled onClick={() => setDropdownActive('security')}>
             <span>Segurança</span>
             <AiOutlineRight />
           </S.LinkStyled>
         </Link>
         <Link href="/" passHref>
-          <S.LinkStyled>
+          <S.LinkStyled onClick={() => setDropdownActive('mods')}>
             <span>Academia de moderadores</span>
             <AiOutlineRight />
           </S.LinkStyled>

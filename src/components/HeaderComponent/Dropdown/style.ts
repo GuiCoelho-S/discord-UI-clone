@@ -16,6 +16,25 @@ export const DropDownContainer = styled.section`
   flex-direction: column;
   justify-content: space-between;
 
+  @media (min-width:1030px){
+    display: none;
+  }
+
+  .dropdown-enter {
+    transform: translateX(100%);
+    position: absolute;
+  }
+  .dropdown-enter-active {
+    transform: translateX(0);
+    transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .dropdown-exit {
+    transform: translateX(0);
+    transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .dropdown-exit-active {
+    transform: translateX(100%);
+  }
 `
 
 export const DropdownFooter = styled.footer`
