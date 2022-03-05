@@ -4,8 +4,12 @@ import { AiOutlineClose, AiOutlineDownload, AiOutlineRight } from 'react-icons/a
 import { FaDiscord } from 'react-icons/fa';
 import Link from 'next/link';
 import { SimpleButton } from '../../../ui/Button';
+import { useContext } from 'react';
+import { StateContext } from '../../../../context/useGlobalState';
+
 export function MainMode() {
 
+  const { setDropdownState, setDropdownActive } = useContext(StateContext);
   return (
     <S.DropDownContainer>
       <S.DropdownHeader>
@@ -13,7 +17,7 @@ export function MainMode() {
           <FaDiscord />
           <p>Discord</p>
         </HomeButton>
-        <button>
+        <button onClick={() => setDropdownState(false)}>
           <AiOutlineClose />
         </button>
       </S.DropdownHeader>
@@ -35,13 +39,13 @@ export function MainMode() {
           </S.ItemLink>
         </Link>
         <Link href="/" passHref>
-          <S.ChangeMode>
+          <S.ChangeMode onClick={() => setDropdownActive('security')}>
             <span>Segurança</span>
             <AiOutlineRight />
           </S.ChangeMode>
         </Link>
         <Link href="/" passHref>
-          <S.ChangeMode>
+          <S.ChangeMode onClick={() => setDropdownActive('mods')}>
             <span>Academia de Moderadores</span>
             <AiOutlineRight />
           </S.ChangeMode>

@@ -32,9 +32,6 @@ export const SimpleButton = styled.button<StyleProps>`
     -webkit-box-shadow: 1px 11px 41px -12px #000000; 
     box-shadow: 1px 11px 41px -12px #000000;
     
-    p {
-      color: var(--brand);
-    }
   }
   @media (max-width:400px){
     padding: 8px 14px;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { CloseDropDown } from "./Dropdown/Home/style";
 
 export const HeaderContainer = styled.div`
   width: 100%;
@@ -56,11 +55,19 @@ export const HeaderContainer = styled.div`
   }
 ` ;
 
+export const ContainerDropdown = styled.div`
+position: absolute;
+top:0; 
+right:0;
+max-width:320px;
+width:100%;
 
-export const OpenDropdown = styled(CloseDropDown)`
+height:100%;
+background-color: #fff;
+`
 
-position:relative;
-top:0;
+export const OpenDropdown = styled.button`
+
 border-radius: 50%;
 background-color: var(--brand);
 cursor:pointer;

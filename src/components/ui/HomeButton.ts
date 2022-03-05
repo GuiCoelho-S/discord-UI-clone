@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
-interface Props{
+interface Props {
   textColor?: string;
   svgColor?: string;
+  textSize: string;
+  svgSize: number;
 }
 
 export const HomeButton = styled.button<Props>`
@@ -17,15 +19,15 @@ export const HomeButton = styled.button<Props>`
   border: 1px solid transparent;
 
   svg {
-    width: 40px;
-    height: 40px;
+    width: ${(props) => `${props.svgSize}px`};
+    height: ${(props) => `${props.svgSize}px`};
     fill: ${(props) => props.svgColor ? props.svgColor : "#fff"};
   }
-  h2 {
+  p {
     font-weight: 900;
     color: ${(props) => props.textColor ? props.textColor : "#fff"};
-    font-size:1.2rem;
-  }
+    font-size: ${(props) => props.textSize};
+}
 
   :focus {
     outline: 4px solid var(--focus-border);

@@ -9,7 +9,8 @@ export const DropDownContainer = styled.section`
   width:100%;
   height:100vh;
 
-  background-color: #fff;
+  z-index:2;
+  background-color: inherit;
 
   display:flex;
   flex-direction: column;
@@ -40,7 +41,6 @@ export const DropDownContainer = styled.section`
 export const DropdownHeader = styled.header`
 
 position: relative;
-
 height: 100px;
 width:80%;
 display:flex;
@@ -52,14 +52,15 @@ padding:20px 0 12px 0;
 
 
   button: last-child {
+    background-color: inherit;
+    border-radius: 50%;
+    border: 2px solid transparent;
     position:absolute;
     top:10px;
     right:10px;
 
     width:40px;
     height:40px;
-
-    border:1px solid red;
     
     display:grid;
     place-items: center;
@@ -69,7 +70,39 @@ padding:20px 0 12px 0;
       height: 20px;
       fill: #333;
     }
+    :hover {
+      background-color:rgba(0,0,0,.2);
+    }
   }
+  :focus {
+
+  button {
+    border-color: #333;
+    outline:none;
+  }
+}
+`;
+
+export const BackToMain = styled.button`
+
+border-radius:8px;
+padding: 8px;
+background-color: white;
+border:1px solid transparent;
+display: flex;
+align-items:center;
+gap: 10px;
+
+cursor: pointer;
+
+svg {
+  width:20px;
+  height: 20px;
+}
+
+p {
+  font-size: 1rem;
+}
 `;
 
 export const DropdownUl = styled.ul`
@@ -155,11 +188,17 @@ export const ChangeMode = styled.button`
     outline: 4px solid var(--brand)
   }
 `;
+export const SubTitle = styled.h3`
+
+font-size:1rem;
+color: #000;
+padding: 10px 0;
+font-family: 'Roboto', Arial
+`;
 
 export const DropdownFooter = styled.footer`
 width: 100%;
 height: 100px;
-border:1px solid red;
 display: grid;
 place-items: center;
 
