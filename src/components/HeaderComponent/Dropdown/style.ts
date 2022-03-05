@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { SimpleButton } from "../../ui/Button";
 
 export const DropDownContainer = styled.section`
 
@@ -37,31 +36,145 @@ export const DropDownContainer = styled.section`
   }
 `
 
-export const DropdownFooter = styled.footer`
-width:100%;
-height:70px;
 
-display:grid;
+export const DropdownHeader = styled.header`
+
+position: relative;
+
+height: 100px;
+width:80%;
+display:flex;
+justify-content: flex-start;
+border:1px solid red;
+border: 1px solid transparent;
+border-bottom: 1px solid grey;
+padding:20px 0 12px 0;
+
+
+  button: last-child {
+    position:absolute;
+    top:10px;
+    right:10px;
+
+    width:40px;
+    height:40px;
+
+    border:1px solid red;
+    
+    display:grid;
+    place-items: center;
+    
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #333;
+    }
+  }
+`;
+
+export const DropdownUl = styled.ul`
+
+height:calc(100vh - 170px); /*100px - header + 70px - footer */
+overflow-y: scroll;
+padding:30px 30px 10px 30px;
+
+display:flex;
+flex-direction: column;
+    
+:--webkit-scrollbar {
+    display:none;
+  }
+
+scrollbar-width: none;  
+`;
+
+export const ItemLink = styled.a`
+  
+    width:100%;
+    padding:10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    text-decoration:none;
+    gap:10px;
+    
+    span {
+      font-size: 1rem;
+      color:#333;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  :hover {
+    background-color: rgba(0,0,0,.05);
+
+      span {
+        color: var(--brand);
+        text-decoration: underline;
+      }
+    }
+  :focus {
+    outline: 4px solid var(--brand)
+  }
+`
+export const ChangeMode = styled.button`
+    
+    cursor:pointer;
+    background-color: inherit;
+    width:100%;
+    padding:10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+
+    display: flex;
+    gap:10px;
+    
+    span {
+      font-size: 1rem;
+      text-decoration:none;
+      color:#333;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  :hover {
+    background-color: rgba(0,0,0,.05);
+
+    svg {
+        fill: var(--brand);
+      }
+    span {
+      color: var(--brand);
+      text-decoration: underline;
+    }
+  }
+  :focus {
+    outline: 4px solid var(--brand)
+  }
+`;
+
+export const DropdownFooter = styled.footer`
+width: 100%;
+height: 100px;
+border:1px solid red;
+display: grid;
 place-items: center;
 
-${SimpleButton}{
+button {
   width:80%;
+  height: auto;
+  padding: 5px 20px;
 
-  padding: 8px 30px;
   p {
-    font-size:0.8rem;
-    color: #fff;
+    font-size:0.9rem;
+    font-style: bold;
   }
   svg {
-    width:16px;
-    height:16px;
-    fill: #fff;
-  }
-  :hover {
-    filter: brightness(1.3);
-    p {
-      color: #fff;
-    }
+    width:25px;
+    height:25px;
   }
 }
 `
