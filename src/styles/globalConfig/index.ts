@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
 :root {
   --brand: #5865f2;
+  --dark-brand: #404EED;
   --brand-gradient: linear-gradient(90deg,#8ea1e1,#7289da);
   --greyple: #99aab5;
   --dark-not-black: #2c2f33;
@@ -25,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   --black-han-sans: 'Black Han Sans';
   --lexend: 'Lexend';
   --istok-web: 'Istok Web';
+  --sigmar-one: 'Sigmar One';
 }
 
 * {

@@ -8,6 +8,11 @@ import ChatSvg from '../../assets/Home/01.svg';
 import ChannelSvg from '../../assets/Home/02.svg';
 import UsersSvg from '../../assets/Home/03.svg';
 import CallSessionSvg from '../../assets/Home/04.svg';
+
+// Background HomePage
+import BackgroundHome from '../../assets/Home/BackgroundSvg/background.svg';
+
+
 import { SimpleButton } from '../../components/ui/Button';
 import { AiOutlineDownload } from 'react-icons/ai';
 
@@ -21,7 +26,29 @@ const Home: NextPage = () => {
       </Head>
       <HeaderComponent />
       <S.HomeContainer>
-        <h1>IMAGINE UM <br /> LUGAR...</h1>
+
+        <S.HeaderContent bg={'var(--dark-brand)'}>
+          <S.BackgroundImage>
+            <Image src={BackgroundHome} alt="aa" layout='fixed' height={500} />
+          </S.BackgroundImage>
+          <section>
+            <article>
+              <h2>IMAGINE UM <br /> LUGAR...</h2>
+              <p>…onde você possa pertencer a um clube escolar, um grupo de gamers, ou uma comunidade artística mundial. Onde você e alguns amigos possam passar um tempo juntos. Um lugar que torna fácil conversar todos os dias e socializar com mais frequência.</p>
+            </article>
+            <aside>
+              <SimpleButton bg='#fff' textColor='var(--black) '>
+                <AiOutlineDownload />
+                <p>Baixar para windows</p>
+              </SimpleButton>
+              <SimpleButton bg='#23272A' textColor='#fff'>
+                <p>Abra o discord no seu navegador</p>
+              </SimpleButton>
+
+            </aside>
+          </section>
+        </S.HeaderContent>
+
         <S.Content bg={'#fff'}>
           <section>
             <aside>

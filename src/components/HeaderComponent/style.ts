@@ -5,7 +5,7 @@ export const HeaderContainer = styled.div`
   max-width: 100vw;
   height: 100%;
 
-  background-color: var(--brand);
+  background-color: var(--dark-brand);
 
   header {
     margin:0 auto;

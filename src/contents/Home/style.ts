@@ -12,6 +12,75 @@ flex-direction: column;
 
 `
 
+export const HeaderContent = styled.div<PropsTypes>`
+padding: 0px 0 20px 0;
+position:relative;
+height:500px;
+width: 100%;
+display:flex;
+justify-content: center;
+z-index:0;
+background-color: ${(props) => props.bg};
+
+section {
+  z-index:2;
+  width:100%;
+  max-width: var(--max-page-width);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-evenly;
+
+  aside {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+  }
+  article {
+    max-width:none;
+    width:100%;
+    max-width:900px;
+
+    h2,h3,p {
+      text-align:center;
+    }
+    
+    h2 {
+      padding: 0 0 30px 0;
+      font-size:3.5rem;
+      font-family: var(--sigmar-one);
+      color:#fff;
+      line-height:3.3rem;
+    }
+
+    p {
+      font-size:1.4rem;
+      color:#fff;
+      padding:0 20px;
+    }
+  }
+ 
+}
+`
+export const BackgroundImage = styled.div`
+
+position:absolute;
+top:0;
+right:0;
+
+width:100%;
+height:300px;
+z-index:1;
+object-fit:cover;
+
+display:flex;
+justify-content:flex-end;
+img {
+  height:100%;
+  object-fit:cover;
+`
+
 export const Content = styled.div<PropsTypes>`
 
   width:100%; 
