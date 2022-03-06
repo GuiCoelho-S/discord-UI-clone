@@ -72,6 +72,9 @@ const Home: NextPage = () => {
           </section>
 
           <section>
+            <article>
+              <h3>Vamos começar sua jornada?</h3>
+            </article>
             <SimpleButton bg={'var(--brand)'} textColor={'#fff'}>
               <AiOutlineDownload />
               <p>Baixar para windows</p>

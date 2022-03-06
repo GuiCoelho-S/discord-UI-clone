@@ -43,7 +43,7 @@ export const GlobalStyle = createGlobalStyle`
   min-height: 100vh ;
   background: #333;
 
-  h2 {
+  h2, h3 {
     font-family: var(--lexend),sans-serif;
     font-weight:700;
     color:#222;

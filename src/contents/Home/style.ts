@@ -36,6 +36,10 @@ export const Content = styled.div<PropsTypes>`
         font-size:2.8rem;
       }
     
+    h3 {
+        font-size:2.2rem;
+      } 
+
       p {
         padding-top:30px;
         font-size:1.5rem;
@@ -55,20 +59,22 @@ export const FooterContent = styled(Content)`
 section {
   flex-direction:column;
   align-items:center;
-
   article {
     max-width:none;
     width:100%;
     padding:0 30px;
 
-    h2,p {
+    h2,h3,p {
       text-align:center;
     }
+    
+    h2, h3 {
+      padding: 30px 0;
+    }
   }
-
+  
   button {
     padding:10px 40px;
-    margin-top:20px;
     p {
       font-size:1.2rem;
     }
