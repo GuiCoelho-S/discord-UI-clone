@@ -2,26 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
-
-  body {
-  width:100vw;
-  overflow-x: hidden;
-  height:100%;
-  min-height: 100vh ;
-  background: #333;
-}
-
-/* fonts
-
-roboto -> 100,300,500,900
-*/ 
-
 :root {
   --brand: #5865f2;
   --brand-gradient: linear-gradient(90deg,#8ea1e1,#7289da);
@@ -41,7 +21,39 @@ roboto -> 100,300,500,900
 
   // fonts
   
-  --roboto: 'Roboto'
-  --black-han-sans: 'Black Han Sans'
+  --roboto: 'Roboto';
+  --black-han-sans: 'Black Han Sans';
+  --lexend: 'Lexend';
+  --istok-web: 'Istok Web';
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--istok-web), sans-serif;
+  font-weight:300;
+  color:#222;
+}
+
+  body {
+  width:100vw;
+  overflow-x: hidden;
+  height:100%;
+  min-height: 100vh ;
+  background: #333;
+
+  h2 {
+    font-family: var(--lexend),sans-serif;
+    font-weight:700;
+    color:#222;
+  }
+
+}
+
+/* fonts
+
+roboto -> 100,300,500,900
+*/ 
+
 `
