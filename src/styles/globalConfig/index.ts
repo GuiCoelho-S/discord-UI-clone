@@ -38,5 +38,10 @@ roboto -> 100,300,500,900
   --ekko-red: #de2761;
 
   --max-page-width: 1260px;
+
+  // fonts
+  
+  --roboto: 'Roboto'
+  --black-han-sans: 'Black Han Sans'
 }
 `
