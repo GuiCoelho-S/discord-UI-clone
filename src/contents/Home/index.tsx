@@ -11,7 +11,8 @@ import CallSessionSvg from '../../assets/Home/04.svg';
 
 // Background HomePage
 import BackgroundHome from '../../assets/Home/BackgroundSvg/background.svg';
-
+import RelaxingLeft from '../../assets/Home/BackgroundSvg/relaxing.svg';
+import BarWithFriends from '../../assets/Home/BackgroundSvg/bar_w_friends.svg';
 
 import { SimpleButton } from '../../components/ui/Button';
 import { AiOutlineDownload } from 'react-icons/ai';
@@ -30,6 +31,11 @@ const Home: NextPage = () => {
         <S.HeaderContent bg={'var(--dark-brand)'}>
           <S.BackgroundImage>
             <Image src={BackgroundHome} alt="aa" layout='fixed' height={500} />
+            <div>
+
+              <Image src={RelaxingLeft} alt="a" layout='intrinsic' height={400} />
+              <Image src={BarWithFriends} alt="aaaa0" layout='intrinsic' height={400} />
+            </div>
           </S.BackgroundImage>
           <section>
             <article>
