@@ -23,7 +23,7 @@ z-index:0;
 background-color: ${(props) => props.bg};
 
 section {
-  z-index:2;
+  z-index:3;
   width:100%;
   max-width: var(--max-page-width);
 
@@ -62,6 +62,7 @@ section {
   }
  
 }
+  
 `
 export const BackgroundImage = styled.div`
 
@@ -79,6 +80,27 @@ justify-content:flex-end;
 img {
   height:100%;
   object-fit:cover;
+}
+
+
+div {
+  width:100%;
+  height:600px !important;
+  height:inherit;
+  position:absolute;
+  left:0;
+  top:0;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+
+  img {
+    aspect-ratio:1/1;
+    object-fit:contain;
+    display:block;
+    border:1px solid red;
+  }
+}
 `
 
 export const Content = styled.div<PropsTypes>`
