@@ -25,21 +25,21 @@ function HeaderComponent() {
         <S.NavList>
           <ul>
             <li>
-              <Link href="/ffddfdfdf" >Baixar</Link>
-            </li>
-            <li>
+              <Link href="/" >Baixar</Link>
+               </li>   
+             <li>
               <Link href="/" >Nitro</Link>
             </li>
             <li>
               <Link href="/" >Segurança</Link>
             </li>
             <li>
-              <Link href="/" >Suporte</Link>
-            </li>
+            <Link href="/" >Suporte</Link>
+            </li >
             <li>
               <Link href="/" >Blog</Link>
             </li>
-            <li>
+            <li >
               <Link href="/" >Carreiras</Link>
             </li>
           </ul>
